@@ -1,0 +1,181 @@
+@import '../../theme/tokens.less';
+@import '../../theme/component-variables.less';
+
+.dt-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--btn-font-weight, @btn-font-weight);
+  white-space: nowrap;
+  text-align: center;
+  background-image: none;
+  border: var(--btn-border-width, @btn-border-width) var(--btn-border-style, @btn-border-style) transparent;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  user-select: none;
+  touch-action: manipulation;
+  line-height: 1.5715;
+  font-family: var(--font-family, @font-family);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  // 按钮大小
+  &.dt-btn-large {
+    height: var(--btn-height-lg, @btn-height-lg);
+    padding: 0 var(--btn-padding-horizontal-lg, @btn-padding-horizontal-lg);
+    font-size: var(--btn-font-size-lg, @btn-font-size-lg);
+    border-radius: var(--btn-border-radius-base, @btn-border-radius-base);
+  }
+  
+  &.dt-btn-middle {
+    height: var(--btn-height-base, @btn-height-base);
+    padding: 0 var(--btn-padding-horizontal-base, @btn-padding-horizontal-base);
+    font-size: var(--btn-font-size-base, @btn-font-size-base);
+    border-radius: var(--btn-border-radius-base, @btn-border-radius-base);
+  }
+  
+  &.dt-btn-small {
+    height: var(--btn-height-sm, @btn-height-sm);
+    padding: 0 var(--btn-padding-horizontal-sm, @btn-padding-horizontal-sm);
+    font-size: var(--btn-font-size-sm, @btn-font-size-sm);
+    border-radius: var(--btn-border-radius-sm, @btn-border-radius-sm);
+  }
+  
+  // 主要按钮样式
+  &.dt-btn-primary {
+    color: var(--btn-primary-color, @btn-primary-color);
+    background-color: var(--btn-primary-bg, @btn-primary-bg);
+    border-color: var(--btn-primary-border, @btn-primary-border);
+    
+    &:hover:not(.dt-btn-disabled):not(.dt-btn-loading) {
+      background-color: var(--primary-color-hover, @primary-color-hover);
+      border-color: var(--primary-color-hover, @primary-color-hover);
+    }
+    
+    &:active:not(.dt-btn-disabled):not(.dt-btn-loading) {
+      background-color: var(--primary-color-active, @primary-color-active);
+      border-color: var(--primary-color-active, @primary-color-active);
+    }
+  }
+  
+  // 默认按钮样式
+  &.dt-btn-default {
+    color: var(--btn-default-color, @btn-default-color);
+    background-color: var(--btn-default-bg, @btn-default-bg);
+    border-color: var(--btn-default-border, @btn-default-border);
+    
+    &:hover:not(.dt-btn-disabled):not(.dt-btn-loading) {
+      color: var(--primary-color, @primary-color);
+      border-color: var(--primary-color, @primary-color);
+    }
+    
+    &:active:not(.dt-btn-disabled):not(.dt-btn-loading) {
+      color: var(--primary-color-active, @primary-color-active);
+      border-color: var(--primary-color-active, @primary-color-active);
+    }
+  }
+  
+  // 危险按钮样式
+  &.dt-btn-danger {
+    color: var(--btn-danger-color, @btn-danger-color);
+    background-color: var(--btn-danger-bg, @btn-danger-bg);
+    border-color: var(--btn-danger-border, @btn-danger-border);
+    
+    &:hover:not(.dt-btn-disabled):not(.dt-btn-loading) {
+      background-color: var(--error-color, @error-color);
+      border-color: var(--error-color, @error-color);
+    }
+    
+    &:active:not(.dt-btn-disabled):not(.dt-btn-loading) {
+      background-color: var(--error-color, @error-color);
+      border-color: var(--error-color, @error-color);
+    }
+  }
+  
+  // 链接按钮样式
+  &.dt-btn-link {
+    color: var(--primary-color, @primary-color);
+    background-color: transparent;
+    border-color: transparent;
+    
+    &:hover:not(.dt-btn-disabled):not(.dt-btn-loading) {
+      color: var(--primary-color-hover, @primary-color-hover);
+    }
+    
+    &:active:not(.dt-btn-disabled):not(.dt-btn-loading) {
+      color: var(--primary-color-active, @primary-color-active);
+    }
+  }
+  
+  // 禁用状态
+  &.dt-btn-disabled {
+    color: var(--btn-disabled-color, @btn-disabled-color);
+    background-color: var(--btn-disabled-bg, @btn-disabled-bg);
+    border-color: var(--btn-disabled-border, @btn-disabled-border);
+    cursor: not-allowed;
+    
+    &:hover,
+    &:active {
+      color: var(--btn-disabled-color, @btn-disabled-color);
+      background-color: var(--btn-disabled-bg, @btn-disabled-bg);
+      border-color: var(--btn-disabled-border, @btn-disabled-border);
+    }
+  }
+  
+  // 加载状态
+  &.dt-btn-loading {
+    cursor: not-allowed;
+    opacity: 0.65;
+  }
+  
+  // 加载图标
+  .dt-btn-loading-icon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: dt-btn-spin 1s linear infinite;
+  }
+}
+
+// 加载动画
+@keyframes dt-btn-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// 按钮组样式
+.dt-btn-group {
+  display: inline-flex;
+  
+  .dt-btn {
+    position: relative;
+    
+    &:not(:first-child) {
+      margin-left: -1px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    
+    &:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    
+    &:hover,
+    &:focus,
+    &:active {
+      z-index: 1;
+    }
+  }
+}

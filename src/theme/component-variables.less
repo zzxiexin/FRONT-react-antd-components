@@ -1,0 +1,152 @@
+// ================================
+// 组件变量定义 (Component Variables)
+// ================================
+
+@import './tokens.less';
+
+// Button 组件变量
+@btn-font-weight: 400;
+@btn-border-radius-base: @border-radius-base;
+@btn-border-radius-sm: @border-radius-sm;
+@btn-border-width: @border-width-base;
+@btn-border-style: @border-style-base;
+
+@btn-height-base: 32px;
+@btn-height-lg: 40px;
+@btn-height-sm: 24px;
+
+@btn-padding-horizontal-base: @spacing-md;
+@btn-padding-horizontal-lg: @spacing-lg;
+@btn-padding-horizontal-sm: @spacing-sm;
+
+@btn-font-size-lg: @font-size-lg;
+@btn-font-size-base: @font-size-base;
+@btn-font-size-sm: @font-size-sm;
+
+@btn-primary-color: @gray-1;
+@btn-primary-bg: @primary-color;
+@btn-primary-border: @primary-color;
+
+@btn-default-color: @text-color;
+@btn-default-bg: @gray-1;
+@btn-default-border: @border-color-base;
+
+@btn-danger-color: @gray-1;
+@btn-danger-bg: @error-color;
+@btn-danger-border: @error-color;
+
+@btn-disabled-color: @text-color-disabled;
+@btn-disabled-bg: @background-color-base;
+@btn-disabled-border: @border-color-base;
+
+// Input 组件变量
+@input-height-base: 32px;
+@input-height-lg: 40px;
+@input-height-sm: 24px;
+
+@input-padding-horizontal-base: @spacing-sm;
+@input-padding-horizontal-lg: @spacing-md;
+@input-padding-horizontal-sm: @spacing-xs;
+
+@input-color: @text-color;
+@input-bg: @gray-1;
+@input-border-color: @border-color-base;
+@input-border-radius: @border-radius-base;
+@input-hover-border-color: @primary-color-hover;
+@input-focus-border-color: @primary-color;
+@input-disabled-color: @text-color-disabled;
+@input-disabled-bg: @background-color-base;
+@input-placeholder-color: @text-color-secondary;
+
+// Card 组件变量
+@card-head-color: @text-color;
+@card-head-background: transparent;
+@card-head-padding: @spacing-md;
+@card-body-padding: @spacing-md;
+@card-padding-base: @spacing-md;
+@card-background: @gray-1;
+@card-shadow: @shadow-1;
+@card-radius: @border-radius-base;
+
+// Modal 组件变量
+@modal-header-padding-vertical: @spacing-md;
+@modal-header-padding-horizontal: @spacing-lg;
+@modal-body-padding: @spacing-lg;
+@modal-footer-padding-vertical: @spacing-md;
+@modal-footer-padding-horizontal: @spacing-lg;
+@modal-mask-bg: fade(@gray-13, 45%);
+@modal-content-bg: @gray-1;
+@modal-header-bg: @gray-1;
+@modal-footer-bg: transparent;
+@modal-border-radius: @border-radius-lg;
+
+// ================================
+// 组件CSS变量映射
+// ================================
+
+:root {
+  // Button 组件变量
+  --btn-font-weight: @btn-font-weight;
+  --btn-border-radius-base: @btn-border-radius-base;
+  --btn-border-radius-sm: @btn-border-radius-sm;
+  --btn-height-base: @btn-height-base;
+  --btn-height-lg: @btn-height-lg;
+  --btn-height-sm: @btn-height-sm;
+  --btn-padding-horizontal-base: @btn-padding-horizontal-base;
+  --btn-padding-horizontal-lg: @btn-padding-horizontal-lg;
+  --btn-padding-horizontal-sm: @btn-padding-horizontal-sm;
+  --btn-font-size-lg: @btn-font-size-lg;
+  --btn-font-size-base: @btn-font-size-base;
+  --btn-font-size-sm: @btn-font-size-sm;
+  --btn-primary-color: @btn-primary-color;
+  --btn-primary-bg: @btn-primary-bg;
+  --btn-primary-border: @btn-primary-border;
+  --btn-default-color: @btn-default-color;
+  --btn-default-bg: @btn-default-bg;
+  --btn-default-border: @btn-default-border;
+  --btn-danger-color: @btn-danger-color;
+  --btn-danger-bg: @btn-danger-bg;
+  --btn-danger-border: @btn-danger-border;
+  --btn-disabled-color: @btn-disabled-color;
+  --btn-disabled-bg: @btn-disabled-bg;
+  --btn-disabled-border: @btn-disabled-border;
+
+  // Input 组件变量
+  --input-height-base: @input-height-base;
+  --input-height-lg: @input-height-lg;
+  --input-height-sm: @input-height-sm;
+  --input-padding-horizontal-base: @input-padding-horizontal-base;
+  --input-padding-horizontal-lg: @input-padding-horizontal-lg;
+  --input-padding-horizontal-sm: @input-padding-horizontal-sm;
+  --input-color: @input-color;
+  --input-bg: @input-bg;
+  --input-border-color: @input-border-color;
+  --input-border-radius: @input-border-radius;
+  --input-hover-border-color: @input-hover-border-color;
+  --input-focus-border-color: @input-focus-border-color;
+  --input-disabled-color: @input-disabled-color;
+  --input-disabled-bg: @input-disabled-bg;
+  --input-placeholder-color: @input-placeholder-color;
+
+  // Card 组件变量
+  --card-head-color: @card-head-color;
+  --card-head-background: @card-head-background;
+  --card-head-padding: @card-head-padding;
+  --card-body-padding: @card-body-padding;
+  --card-padding-base: @card-padding-base;
+  --card-background: @card-background;
+  --card-shadow: @card-shadow;
+  --card-radius: @card-radius;
+
+  // Modal 组件变量
+  --modal-header-padding-vertical: @modal-header-padding-vertical;
+  --modal-header-padding-horizontal: @modal-header-padding-horizontal;
+  --modal-body-padding: @modal-body-padding;
+  --modal-footer-padding-vertical: @modal-footer-padding-vertical;
+  --modal-footer-padding-horizontal: @modal-footer-padding-horizontal;
+  --modal-mask-bg: @modal-mask-bg;
+  --modal-content-bg: @modal-content-bg;
+  --modal-header-bg: @modal-header-bg;
+  --modal-footer-bg: @modal-footer-bg;
+  --modal-border-radius: @modal-border-radius;
+}

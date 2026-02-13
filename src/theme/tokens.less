@@ -1,0 +1,193 @@
+// ================================
+// 基础令牌 (Base Tokens)
+// ================================
+
+// 颜色系统
+@blue-1: #e6f7ff;
+@blue-2: #bae7ff;
+@blue-3: #91d5ff;
+@blue-4: #69c0ff;
+@blue-5: #40a9ff;
+@blue-6: #1890ff;
+@blue-7: #096dd9;
+@blue-8: #0050b3;
+@blue-9: #003a8c;
+@blue-10: #002766;
+
+@green-1: #f6ffed;
+@green-2: #d9f7be;
+@green-3: #b7eb8f;
+@green-4: #95de64;
+@green-5: #73d13d;
+@green-6: #52c41a;
+@green-7: #389e0d;
+@green-8: #237804;
+@green-9: #135200;
+@green-10: #092b00;
+
+@red-1: #fff1f0;
+@red-2: #ffccc7;
+@red-3: #ffa39e;
+@red-4: #ff7875;
+@red-5: #ff4d4f;
+@red-6: #f5222d;
+@red-7: #cf1322;
+@red-8: #a8071a;
+@red-9: #820014;
+@red-10: #5c0011;
+
+@orange-1: #fff7e6;
+@orange-2: #ffe7ba;
+@orange-3: #ffd591;
+@orange-4: #ffc069;
+@orange-5: #ffa940;
+@orange-6: #fa8c16;
+@orange-7: #d46b08;
+@orange-8: #ad4e00;
+@orange-9: #873800;
+@orange-10: #612500;
+
+// 中性色
+@gray-1: #ffffff;
+@gray-2: #fafafa;
+@gray-3: #f5f5f5;
+@gray-4: #f0f0f0;
+@gray-5: #d9d9d9;
+@gray-6: #bfbfbf;
+@gray-7: #8c8c8c;
+@gray-8: #595959;
+@gray-9: #434343;
+@gray-10: #262626;
+@gray-11: #1f1f1f;
+@gray-12: #141414;
+@gray-13: #000000;
+
+// 间距系统
+@spacing-xs: 4px;
+@spacing-sm: 8px;
+@spacing-md: 16px;
+@spacing-lg: 24px;
+@spacing-xl: 32px;
+@spacing-xxl: 48px;
+
+// 字体系统
+@font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+@font-size-sm: 12px;
+@font-size-base: 14px;
+@font-size-lg: 16px;
+@font-size-xl: 20px;
+@font-size-xxl: 24px;
+
+@line-height-base: 1.5715;
+@line-height-lg: 1.5;
+@line-height-sm: 1.4;
+
+// 边框系统
+@border-radius-sm: 2px;
+@border-radius-base: 4px;
+@border-radius-lg: 8px;
+@border-radius-xl: 12px;
+
+@border-width-base: 1px;
+@border-style-base: solid;
+
+// 阴影系统
+@shadow-1: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+@shadow-2: 0 1px 8px 0 rgba(0, 0, 0, 0.15);
+@shadow-3: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+
+// ================================
+// 语义令牌 (Semantic Tokens)
+// ================================
+
+// 主色调
+@primary-color: @blue-6;
+@primary-color-hover: @blue-5;
+@primary-color-active: @blue-7;
+@primary-color-outline: fade(@blue-6, 20%);
+
+// 功能色
+@success-color: @green-6;
+@warning-color: @orange-6;
+@error-color: @red-6;
+@info-color: @blue-6;
+
+// 文本色
+@text-color: @gray-10;
+@text-color-secondary: @gray-8;
+@text-color-disabled: @gray-6;
+@text-color-inverse: @gray-1;
+
+// 背景色
+@background-color-base: @gray-2;
+@background-color-light: @gray-1;
+@background-color-dark: @gray-12;
+
+// 边框色
+@border-color-base: @gray-5;
+@border-color-split: @gray-4;
+@border-color-inverse: @gray-1;
+
+// ================================
+// CSS 变量映射
+// ================================
+
+:root {
+  // 基础颜色变量
+  --blue-6: @blue-6;
+  --green-6: @green-6;
+  --red-6: @red-6;
+  --orange-6: @orange-6;
+  
+  // 语义颜色变量
+  --primary-color: @primary-color;
+  --primary-color-hover: @primary-color-hover;
+  --primary-color-active: @primary-color-active;
+  --success-color: @success-color;
+  --warning-color: @warning-color;
+  --error-color: @error-color;
+  --info-color: @info-color;
+  
+  // 文本颜色变量
+  --text-color: @text-color;
+  --text-color-secondary: @text-color-secondary;
+  --text-color-disabled: @text-color-disabled;
+  --text-color-inverse: @text-color-inverse;
+  
+  // 背景颜色变量
+  --background-color-base: @background-color-base;
+  --background-color-light: @background-color-light;
+  --background-color-dark: @background-color-dark;
+  
+  // 边框颜色变量
+  --border-color-base: @border-color-base;
+  --border-color-split: @border-color-split;
+  --border-color-inverse: @border-color-inverse;
+  
+  // 间距变量
+  --spacing-xs: @spacing-xs;
+  --spacing-sm: @spacing-sm;
+  --spacing-md: @spacing-md;
+  --spacing-lg: @spacing-lg;
+  --spacing-xl: @spacing-xl;
+  --spacing-xxl: @spacing-xxl;
+  
+  // 字体变量
+  --font-family: @font-family;
+  --font-size-sm: @font-size-sm;
+  --font-size-base: @font-size-base;
+  --font-size-lg: @font-size-lg;
+  --font-size-xl: @font-size-xl;
+  --font-size-xxl: @font-size-xxl;
+  
+  // 边框变量
+  --border-radius-sm: @border-radius-sm;
+  --border-radius-base: @border-radius-base;
+  --border-radius-lg: @border-radius-lg;
+  --border-radius-xl: @border-radius-xl;
+  
+  // 阴影变量
+  --shadow-1: @shadow-1;
+  --shadow-2: @shadow-2;
+  --shadow-3: @shadow-3;
+}
