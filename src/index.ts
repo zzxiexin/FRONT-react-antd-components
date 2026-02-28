@@ -5,6 +5,7 @@ export { useTheme, ThemeProvider, useThemeSwitcher, createUseTheme } from './hoo
 
 // 导出组件
 export { default as Button } from './components/Button';
+export { default as Modal } from './components/Modal';
 
 // 导出样式
 import './theme/tokens.less';
