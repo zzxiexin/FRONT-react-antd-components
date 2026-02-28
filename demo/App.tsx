@@ -19,10 +19,10 @@ const ThemeDemo: React.FC = () => {
 
   return (
     <div style={{ padding: '20px', backgroundColor: 'var(--background-color-base, #fafafa)', minHeight: '100vh' }}>
-      {/* <h1 style={{ color: 'var(--text-color, #262626)' }}>动态主题组件库演示</h1> */}
+      <h1 style={{ color: 'var(--text-color, #262626)' }}>动态主题组件库演示</h1>
       
       <div style={{ marginBottom: '20px' }}>
-        {/* <h3 style={{ color: 'var(--text-color, #262626)' }}>当前主题配置:</h3> */}
+        <h3 style={{ color: 'var(--text-color, #262626)' }}>当前主题配置:</h3>
         <pre style={{ 
           backgroundColor: 'var(--background-color-light, #ffffff)', 
           padding: '10px', 
@@ -34,7 +34,7 @@ const ThemeDemo: React.FC = () => {
       </div>
 
       <div style={{ marginBottom: '20px' }}>
-        {/* <h3 style={{ color: 'var(--text-color, #262626)' }}>主题切换:</h3> */}
+        <h3 style={{ color: 'var(--text-color, #262626)' }}>主题切换:</h3>
         <Button type="primary" onClick={switchToLightTheme} style={{ marginRight: '8px' }}>
           浅色主题
         </Button>
@@ -49,7 +49,7 @@ const ThemeDemo: React.FC = () => {
         </Button>
       </div>
 
-      {/* <div style={{ marginBottom: '20px' }}>
+      <div style={{ marginBottom: '20px' }}>
         <h3 style={{ color: 'var(--text-color, #262626)' }}>按钮组件演示:</h3>
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '16px' }}>
           <Button type="primary">主要按钮</Button>
@@ -115,7 +115,7 @@ const ThemeDemo: React.FC = () => {
             错误色
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
